@@ -10,6 +10,11 @@ namespace LoginReg.Controllers
 {
     public class HomeController : Controller
     {
+        private HomeContext dbContext;
+        public HomeController(HomeContext context)
+        {
+            dbContext = context;
+        }
         public IActionResult Index()
         {
             return View();
